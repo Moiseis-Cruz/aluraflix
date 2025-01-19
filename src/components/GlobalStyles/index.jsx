@@ -10,6 +10,8 @@ const GlobalStyles = createGlobalStyle`
     ul {
         list-style: none;
     }
+
+    /* font-family: "Roboto", serif; */
 `
 
 export default GlobalStyles
