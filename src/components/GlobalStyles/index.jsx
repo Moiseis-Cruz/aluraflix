@@ -7,11 +7,14 @@ const GlobalStyles = createGlobalStyle`
         box-sizing: border-box;
     }
 
+    body {
+        font-family: "Roboto", serif;
+    }
+
     ul {
         list-style: none;
     }
 
-    /* font-family: "Roboto", serif; */
 `
 
 export default GlobalStyles
