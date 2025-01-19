@@ -9,6 +9,8 @@ const HeaderContainer = styled.header`
     align-items: center;
     background-color: black;
     min-height: 125px;
+    border-bottom: 4px solid #2271D1;
+    box-shadow: 0px 5px 29px 0px #2271D1B2;
 `
 
 const ButtonList = styled.ul`

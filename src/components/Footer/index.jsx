@@ -7,6 +7,8 @@ const ContainerFooter = styled.footer`
     align-items: center;
     background-color: black;
     min-height: 125px;
+    border-top: 4px solid Blue;
+    box-shadow: 0px -5px 29px 0px #2271D1B2;
 `
 
 const Footer = () => {
