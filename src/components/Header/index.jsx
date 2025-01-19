@@ -1,6 +1,7 @@
 import ImageLogo from "../../assets/images/logo.png";
 import styled from "styled-components";
 import LinkHeader from "../LinkHeader";
+import ImgLogo from "../ImgLogo";
 
 const HeaderContainer = styled.header`
     display: flex;
@@ -18,7 +19,7 @@ const ButtonList = styled.ul`
 const Header = () => {
     return(
         <HeaderContainer>
-            <img src={ImageLogo} alt="Logo do Aluraflix" />
+            <ImgLogo />
 
             <nav>
                 <ButtonList>
