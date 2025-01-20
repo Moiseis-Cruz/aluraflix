@@ -6,7 +6,7 @@ const HeaderContainer = styled.header`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: black;
+    background-color: #000000;
     min-height: 125px;
     border-bottom: 4px solid #2271D1;
     box-shadow: 0px 5px 29px 0px #2271D1B2;
