@@ -14,7 +14,7 @@ const LinkButton = styled(NavLink)`
     font-weight: 900;
     color: #ffffff;
     border: 2px solid #ffffff;
-    font-family: "Source Code Pro", serif;
+    font-family: "Source Sans 3", serif;
     
     &.active{
         box-shadow: 0 0 5px 5px #2271D1 inset;
