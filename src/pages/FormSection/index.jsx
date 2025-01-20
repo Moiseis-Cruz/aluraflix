@@ -7,6 +7,8 @@ const RegistrationSection = styled.section`
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    background-color: #000000E5;
+    color: #ffffff;
 `
 
 const RegistrationTitle = styled.h2`
