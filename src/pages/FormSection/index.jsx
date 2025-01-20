@@ -1,20 +1,23 @@
 import styled from "styled-components";
+import Form from "../../components/Form";
 
 const RegistrationSection = styled.section`
     padding-block: 71px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 `
 
 const RegistrationTitle = styled.h2`
     font-size: 60px;
     font-weight: 900;
-    text-align: center;
 `
 
 const Paragraph = styled.p`
     font-size: 20px;
     font-weight: 400;
     margin-top: 10px;
-    text-align: center;
 `
 
 const FormSection = () => {
@@ -24,7 +27,7 @@ const FormSection = () => {
 
             <Paragraph>COMPLETE O FORMULÁRIO PARA CRIAR UM NOVO CARD DE VÍDEO.</Paragraph>
 
-            <h3>Criar Card</h3>
+            <Form />
         </RegistrationSection>
     )
 };
