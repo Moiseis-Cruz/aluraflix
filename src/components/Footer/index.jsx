@@ -5,7 +5,7 @@ const ContainerFooter = styled.footer`
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: black;
+    background-color: #000000;
     min-height: 125px;
     border-top: 4px solid Blue;
     box-shadow: 0px -5px 29px 0px #2271D1B2;
