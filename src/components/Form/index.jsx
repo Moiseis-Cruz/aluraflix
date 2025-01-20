@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import DropDown from "../DropDown";
 import TextInput from "../TextInput";
+import Button from "../Button";
+import CommentBox from "../CommentBox";
 
 const ContainerForm = styled.form`
     width: 1172px;
@@ -33,6 +35,10 @@ const Form = () => {
                 <DropDown label="Categoria" teams={team} />
                 <TextInput label="Imagem" placeholder="Link da imagem" />
                 <TextInput label="Vídeo" placeholder="Link do vídeo" />
+                <CommentBox />
+
+                <Button>GUARDAR</Button>
+                <Button>LIMPAR</Button>
             </div>
         </ContainerForm>
     )
