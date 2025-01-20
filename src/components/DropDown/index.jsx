@@ -22,7 +22,7 @@ const DropDown = ({ label, teams }) => {
         <div>
             <Label>{label}</Label>
             <Select>
-                <option value="" disabled selected >selecione uma categoría</option>
+                <option value="" >selecione uma categoría</option>
                 {
                     teams.map((team) => <option key={team}>{team}</option>)
                 }
