@@ -2,11 +2,11 @@ import styled from "styled-components";
 
 const FormControl = styled.div`
     max-width: 573px;
+    width: 100%;
 `
 
 const Input = styled.input`
-    width: 573px;
-    max-width: 100%;
+    width: 100%;
     font-size: 20px;
     font-weight: 600;
     padding: 16px 12px;
