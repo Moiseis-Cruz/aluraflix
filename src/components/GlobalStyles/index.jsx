@@ -10,6 +10,7 @@ const GlobalStyles = createGlobalStyle`
 
     body {
         font-family: "Roboto", serif;
+        background-color: #585858;
     }
 
     ul {
