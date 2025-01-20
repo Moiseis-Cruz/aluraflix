@@ -1,7 +1,12 @@
 import styled from "styled-components";
 
+const FormControl = styled.div`
+    max-width: 570px;
+    width: 100%;
+`
+
 const Select = styled.select`
-    width: 570px;
+    width: 100%;
     font-size: 20px;
     font-weight: 600;
     padding: 16px 12px;
@@ -19,7 +24,7 @@ const Label = styled.label`
 
 const DropDown = ({ label, teams }) => {
     return(
-        <div>
+        <FormControl>
             <Label>{label}</Label>
             <Select>
                 <option value="" >selecione uma categoría</option>
@@ -27,7 +32,7 @@ const DropDown = ({ label, teams }) => {
                     teams.map((team) => <option key={team}>{team}</option>)
                 }
             </Select>
-        </div>
+        </FormControl>
     )
 };
 
