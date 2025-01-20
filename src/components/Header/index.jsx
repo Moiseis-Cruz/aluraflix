@@ -1,4 +1,3 @@
-import ImageLogo from "../../assets/images/logo.png";
 import styled from "styled-components";
 import LinkHeader from "../LinkHeader";
 import ImgLogo from "../ImgLogo";
@@ -11,6 +10,7 @@ const HeaderContainer = styled.header`
     min-height: 125px;
     border-bottom: 4px solid #2271D1;
     box-shadow: 0px 5px 29px 0px #2271D1B2;
+    padding-inline: 51px;
 `
 
 const ButtonList = styled.ul`
