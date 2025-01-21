@@ -1,8 +1,5 @@
-# React + Vite
+# ALURAFLIX
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+É um projeto de uma aplicação que tem o intuito de testar a minhas habilidades adiquiridas ao longo do curso de `React.js`.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Neste Projeto você pode adicionar novos vídeos a aplicação por meio do formulário.
