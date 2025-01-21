@@ -1,9 +1,12 @@
 import styled from "styled-components";
+import CollaboratorCard from "../CollaboratorCard";
 
 const TeamsSection = styled.section`
-    height: 435px;
+    min-height: 435px;
     margin-top: 93px;
-    border: 3px solid red;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 `
 
 const Title = styled.h3`
@@ -18,14 +21,28 @@ const Title = styled.h3`
     line-height: 70px;
 `
 
+const ContainerTems = styled.div`
+    display: flex;
+    gap: 30px;
+    overflow-x: auto;
+`
+
 const Team = ({ nome, color }) => {
     return(
         <TeamsSection>
             <Title color={color}>{nome}</Title>
 
-            <div>
-
-            </div>
+            <ContainerTems>
+                <CollaboratorCard />
+                <CollaboratorCard />
+                <CollaboratorCard />
+                <CollaboratorCard />
+                <CollaboratorCard />
+                <CollaboratorCard />
+                <CollaboratorCard />
+                <CollaboratorCard />
+                <CollaboratorCard />
+            </ContainerTems>
         </TeamsSection>
     )
 };
