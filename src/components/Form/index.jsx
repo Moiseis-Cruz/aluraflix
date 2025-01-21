@@ -3,6 +3,7 @@ import DropDown from "../DropDown";
 import TextInput from "../TextInput";
 import Button from "../Button";
 import CommentBox from "../CommentBox";
+import { useState } from "react";
 
 const ContainerForm = styled.form`
     width: 1172px;
@@ -18,6 +19,13 @@ const TitleForm = styled.h3`
     border-block: 2px solid #262626;
 `
 
+const ContentForm = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px 20px;
+    margin-top: 60px;
+`
+
 const Form = () => {
 
     const team = [
@@ -26,20 +34,45 @@ const Form = () => {
         "Mobile"
     ];
 
+    const [ titulo, setTitulo] = useState("");
+    const [ imagem, setImagem ] = useState("");
+    const [ video, setVideo] = useState("");
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        console.log("Submeteu o formulário: ", titulo, imagem, video);
+    };
+
+
     return(
-        <ContainerForm>
+        <ContainerForm onSubmit={handleSubmit}>
             <TitleForm>Criar Card</TitleForm>
 
-            <div style={{display: "flex", flexWrap: "wrap", gap: "60px 20px", marginTop: "60px"}}>
-                <TextInput label="Título" placeholder="Título do vídeo" />
+            <ContentForm>
+                <TextInput
+                    label="Título"
+                    placeholder="Título do vídeo"
+                    valor={titulo}
+                    handleChange={valor => setTitulo(valor)}
+                />
                 <DropDown label="Categoria" teams={team} />
-                <TextInput label="Imagem" placeholder="Link da imagem" />
-                <TextInput label="Vídeo" placeholder="Link do vídeo" />
+                <TextInput
+                    label="Imagem"
+                    placeholder="Link da imagem"
+                    valor={imagem}
+                    handleChange={valor => setImagem(valor)}
+                />
+                <TextInput
+                    label="Vídeo"
+                    placeholder="Link do vídeo"
+                    valor={video}
+                    handleChange={valor => setVideo(valor)}
+                />
                 <CommentBox />
 
                 <Button>GUARDAR</Button>
                 <Button>LIMPAR</Button>
-            </div>
+            </ContentForm>
         </ContainerForm>
     )
 };
