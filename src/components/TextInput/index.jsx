@@ -22,11 +22,12 @@ const Label = styled.label`
     display: block;
 `
 
-const TextInput = ({ label, placeholder }) => {
+const TextInput = ({ label, placeholder, valor, handleChange }) => {
+
     return(
         <FormControl>
             <Label>{label}</Label>
-            <Input type="text" placeholder={placeholder} />
+            <Input onChange={(e) => handleChange(e.target.value)} required value={valor} type="text" placeholder={placeholder} />
         </FormControl>
     )
 };
