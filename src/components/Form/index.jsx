@@ -4,6 +4,7 @@ import TextInput from "../TextInput";
 import Button from "../Button";
 import CommentBox from "../CommentBox";
 import { useState } from "react";
+import { teams } from "../../pages/Home";
 
 const ContainerForm = styled.form`
     width: 1172px;
@@ -26,21 +27,23 @@ const ContentForm = styled.div`
     margin-top: 60px;
 `
 
-const Form = () => {
+const Form = ({ handleRegisteredContributor }) => {
 
-    const team = [
-        "Back End",
-        "Front end",
-        "Mobile"
-    ];
-
-    const [ titulo, setTitulo] = useState("");
-    const [ imagem, setImagem ] = useState("");
+    const [ title, setTitle ] = useState("");
+    const [ image, setImage ] = useState("");
     const [ video, setVideo] = useState("");
+    const [ category, setCategory ] = useState("");
+    const [ description, setDescription] = useState("");
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log("Submeteu o formulário: ", titulo, imagem, video);
+        handleRegisteredContributor({
+            title,
+            image,
+            video,
+            category,
+            description
+        });
     };
 
 
@@ -52,15 +55,20 @@ const Form = () => {
                 <TextInput
                     label="Título"
                     placeholder="Título do vídeo"
-                    valor={titulo}
-                    handleChange={valor => setTitulo(valor)}
+                    valor={title}
+                    handleChange={valor => setTitle(valor)}
                 />
-                <DropDown label="Categoria" teams={team} />
+                <DropDown
+                    label="Categoria"
+                    teams={teams.map(time => time.nome.toLowerCase())}
+                    valor={category}
+                    handleChange={valor => setCategory(valor)}
+                />
                 <TextInput
                     label="Imagem"
                     placeholder="Link da imagem"
-                    valor={imagem}
-                    handleChange={valor => setImagem(valor)}
+                    valor={image}
+                    handleChange={valor => setImage(valor)}
                 />
                 <TextInput
                     label="Vídeo"
@@ -68,7 +76,10 @@ const Form = () => {
                     valor={video}
                     handleChange={valor => setVideo(valor)}
                 />
-                <CommentBox />
+                <CommentBox
+                    valor={description}
+                    handleChange={valor => setDescription(valor)}
+                />
 
                 <Button>GUARDAR</Button>
                 <Button>LIMPAR</Button>
