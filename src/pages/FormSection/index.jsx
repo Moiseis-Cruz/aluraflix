@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Form from "../../components/Form";
+import { useState } from "react";
 
 const RegistrationSection = styled.section`
     padding-block: 71px;
@@ -23,13 +24,25 @@ const Paragraph = styled.p`
 `
 
 const FormSection = () => {
+
+    const [ collaborators, setCollaborators ] = useState([]);
+
+    const handleNewCollaborator = (collaborator) => {
+        console.log(collaborator);
+        setCollaborators([
+            ...collaborators, collaborator
+        ]);
+    };
+
     return(
         <RegistrationSection>
             <RegistrationTitle>NOVO VÍDEO</RegistrationTitle>
 
             <Paragraph>COMPLETE O FORMULÁRIO PARA CRIAR UM NOVO CARD DE VÍDEO.</Paragraph>
 
-            <Form />
+            <Form
+                handleRegisteredContributor={collaborator => handleNewCollaborator(collaborator)}
+            />
         </RegistrationSection>
     )
 };
