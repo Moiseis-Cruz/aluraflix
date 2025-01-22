@@ -4,10 +4,9 @@ import Team from "../../components/Team";
 const ContainerHome = styled.section`
     background-color: #000000E5;
     padding: 93px 42px 159px;
-
 `
 
-const teams = [
+export const teams = [
     {
         nome: "FRONT END",
         color: "#6BD1FF"
