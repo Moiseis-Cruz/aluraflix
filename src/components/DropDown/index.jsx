@@ -22,11 +22,11 @@ const Label = styled.label`
     display: block;
 `
 
-const DropDown = ({ label, teams }) => {
+const DropDown = ({ label, teams, valor, handleChange }) => {
     return(
         <FormControl>
             <Label>{label}</Label>
-            <Select>
+            <Select value={valor} onChange={(e) => handleChange(e.target.value)}>
                 <option value="" >selecione uma categoría</option>
                 {
                     teams.map((team) => <option key={team}>{team}</option>)
