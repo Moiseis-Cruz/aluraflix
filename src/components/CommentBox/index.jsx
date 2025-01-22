@@ -24,11 +24,11 @@ const FormControl = styled.div`
     flex-direction: column;
 `
 
-const CommentBox = () => {
+const CommentBox = ({ valor, handleChange }) => {
     return(
         <FormControl>
             <label>descrição</label>
-            <StyledTextArea placeholder="Descrição"></StyledTextArea>
+            <StyledTextArea value={valor} onChange={(e) => handleChange(e.target.value)} placeholder="Descrição"></StyledTextArea>
         </FormControl>
     )
 }
